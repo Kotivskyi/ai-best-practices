@@ -1,10 +1,5 @@
 ---
-description: 
-globs: 
-alwaysApply: false
----
----
-description: 
+description: Task List Create and Update rules
 globs: 
 alwaysApply: false
 ---
