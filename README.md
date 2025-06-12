@@ -17,72 +17,14 @@ ai-best-practices/
 ├── custom-instructions/     # Templates and examples for AI assistant configuration
 │   └── copilot-instructions.md
 ├── planning/               # Project planning methodologies and templates
-│   └── plan.mdc
+│   ├── create-plan.prompt.md
+│   └── task-maintenance.instructions.md
 ├── task-list/             # Task management frameworks and examples
 │   ├── task-list.mdc
 │   └── TASK.example.md
 └── README.md              # This file - project overview and guidelines
 ```
 
-## Getting Started
-
-1. **Browse the practices**: Start with the folder that matches your current need
-2. **Adapt to your project**: Copy and modify templates to fit your specific requirements
-3. **Configure your AI**: Use the custom instructions to improve AI assistant performance
-4. **Follow the workflow**: Implement the task management and planning practices in your development process
-
-## Planning for AI-Assisted Development
-
-For larger changes, spending an above-average amount of thought to create a precise, well-scoped plan can significantly improve AI assistant output quality and reduce iteration cycles.
-
-### When to Create a Detailed Plan
-
-If you find that you're not getting the result you want after a few different variations of the same prompt, consider zooming out and creating a more detailed plan from scratch, as if you were creating a PRD (Product Requirements Document) for a coworker. 
-
-**Key insight**: Oftentimes the hard part is figuring out *what* change should be made—a task suited well for humans. With the right instructions, we can delegate parts of the *implementation* to AI assistants.
-
-### Using AI to Augment Plan Creation
-
-One effective approach is to use your AI assistant's conversation mode to help create the plan itself:
-
-1. **Gather context**: Collect information from your project management systems, internal docs, or loose thoughts
-2. **Identify dependencies**: Think about what files and dependencies you have in the codebase that you want to include
-3. **Use AI for brainstorming**: Turn on Ask/Chat mode and dump your context to get structured feedback
-
-#### Example Planning Prompt
-
-```
-I need to add user authentication to my web app. Here's what I have:
-
-Context:
-- Next.js app with TypeScript
-- Already using Prisma for database
-- Want to implement OAuth with Google and GitHub
-- Need protected routes and user sessions
-
-Files to consider:
-- `/lib/auth.ts` (doesn't exist yet)
-- `/pages/api/auth/` folder structure
-- `/components/LoginButton.tsx`
-- `/middleware.ts` for route protection
-
-Dependencies I know I'll need:
-- NextAuth.js for OAuth handling
-- @next-auth/prisma-adapter for database integration
-
-Help me create a step-by-step implementation plan, breaking this down into logical phases that I can tackle incrementally.
-```
-
-### Planning Best Practices
-
-- **Start with the end goal**: Clearly define what success looks like
-- **Break into phases**: Divide complex features into logical, testable increments  
-- **Identify integration points**: Note where new code will interact with existing systems
-- **Consider edge cases early**: Think through error states and boundary conditions
-- **Plan for testing**: Include validation steps for each phase
-- **Document assumptions**: Note any assumptions about user behavior or system constraints
-
-See our [planning templates](planning/) for structured approaches to feature planning and development workflows.
 
 ## Custom Instructions for AI Assistants
 
@@ -93,6 +35,29 @@ If Copilot is able to build, test and validate its changes in its own developmen
 Add instructions to a .github/copilot-instructions.md file in the repository. For more information, see Adding repository custom instructions for GitHub Copilot.
 
 Here is an example of effective instructions: [copilot-instructions.md](custom-instructions/copilot-instructions.md)
+
+### Task Maintenance Instructions
+
+The [task-maintenance.instructions.md](planning/task-maintenance.instructions.md) file provides specific guidance for AI assistants on how to maintain and update task lists during development. This ensures that:
+
+- Task progress is consistently tracked and updated
+- Implementation details are documented as they're discovered
+- File references remain accurate throughout development
+- AI assistants follow structured approaches to task management
+
+These instructions are designed to work with task files that follow the `*TASK*.md` naming pattern.
+
+## Planning Framework
+
+The [create-plan.prompt.md](planning/create-plan.prompt.md) provides a structured template for creating development plans with AI assistance. This template:
+
+- Guides AI assistants to search the codebase before creating plans
+- Focuses on planning rather than immediate implementation
+- Creates structured task lists for tracking progress
+- Includes guidance for manual testing workflows
+- Ensures clear documentation of implementation details
+
+Use this template when starting new features or complex changes to get well-structured, actionable development plans.
 
 
 ## Project Maintenance Rules
@@ -142,3 +107,6 @@ We welcome contributions to improve and expand these AI development best practic
 
 - **GitHub Copilot Guides:**  
    [GitHub Copilot Documentation](https://docs.github.com/en/copilot/using-github-copilot)
+
+- **VS Code GitHub Copilot Guides:**  
+   [Copilot Customization in VS Code](https://code.visualstudio.com/docs/copilot/copilot-customization)

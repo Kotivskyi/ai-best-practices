@@ -18,7 +18,7 @@ This is a Go based repository with a Ruby client for certain API endpoints. It i
 - `admin/`: Admin interface components
 - `config/`: Configuration files and templates
 - `docs/`: Documentation
-- `proto/`: Protocol buffer definitions. Run `make proto` after making updates here.
+- `proto/`: Protocol  uffer definitions. Run `make proto` after making updates here.
 - `ruby/`: Ruby implementation components. Updates to this folder should include incrementing this version file using semantic versioning: `ruby/lib/billing-platform/version.rb`
 - `testing/`: Test helpers and fixtures
 
